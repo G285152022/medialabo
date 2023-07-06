@@ -24,8 +24,8 @@ h2.insertAdjacentElement('afterend', p);
 
 
 // 練習4-4 箇条書き削除プログラム
-let ps3 = document.querySelectorAll('li');
-for(let p4 of ps3){
+let n = document.querySelectorAll('li');
+for(let p4 of n){
 	p4.remove();
 }
 
