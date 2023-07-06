@@ -24,7 +24,17 @@ h2.insertAdjacentElement('afterend', p);
 
 
 // 練習4-4 箇条書き削除プログラム
-
+let ps3 = document.querySelectorAll('li');
+for(let p4 of ps3){
+	p4.remove();
+}
 
 // 練習4-5 箇条書き追加プログラム
+let ul = document.querySelector('ul#location');
+for(let m of data){
+	let li = document.createElement('li');
+	li.textContent = (m.name + ' ... 緯度:' + m.lat + ', 経度:' + m.lng);
+	ul.insertAdjacentElement('beforeend', li);
+}
+
 
