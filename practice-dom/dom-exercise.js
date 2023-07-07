@@ -21,6 +21,16 @@ p.textContent = '写真表と都市の緯度軽度のページです'
 h2.insertAdjacentElement('afterend', p);
 
 // 練習4-3 写真表作成プログラム
+let div = document.querySelector('div#phototable');
+let ph = ['taro.png','jiro.png','hanako.png'];
+for(let i of ph){
+	let img = document.createElement('img');
+	img.setAttribute('src', i);
+	let ps2 = document.createElement('p');
+	ps2.insertAdjacentElement('beforeend', img);
+	div.insertAdjacentElement('beforeend', ps2);
+}
+
 
 
 // 練習4-4 箇条書き削除プログラム
