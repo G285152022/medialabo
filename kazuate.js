@@ -29,15 +29,19 @@ function hantei() {
     if(kaisu < 4){
       if(kotae == yoso){
         console.log('正解です. おめでとう！');
+        break;
       }
       else if(kaisu == 3){
         console.log('まちがい. 残念でした答えは' + kotae + 'です.');
+        break;
       }
       else if(kotae != yoso && kotae > yoso){
         console.log('まちがい.答えはもっと大きいですよ');
+        break;
       }
       else{
         console.log('まちがい.答えはもっと小さいですよ');
+        break;
       }
     }else{
         console.log('答えは' + kotae + 'でした. すでにゲームは終わっています');
