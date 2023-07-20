@@ -46,12 +46,4 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
-
-b.addEventListener('click', greeting);
-
-// 2. イベントハンドラの定義
-function greeting() {
-	let i = document.querySelector('input[name="tenki"]');
-	let shimei = i.value;
-	console.log('こんにちは! ' + shimei + ' さん');
-}
+console.log(data);
