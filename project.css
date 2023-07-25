@@ -11,3 +11,12 @@ h2 {
 	background:linear-gradient(to right, #f0f0f0, #000);
 	margin: 5px;
 }
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
