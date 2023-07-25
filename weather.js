@@ -48,4 +48,17 @@ let data = {
 ////////// 課題3-2 ここからプログラムを書こう
 console.log(data);
 
-let wt = document.querySelector('div#result');
+let div = document.querySelector('div#result');
+let ul = document.createElement('ul');
+let li = document.createElement('li');
+li.textContent = '世界の天気(検索結果1件)';
+div.insertAdjacentElement('beforeend', ul);
+ul.insertAdjacentElement('beforeend', li);
+let ul2 = document.createElement('ul');
+let li2 = document.createElement('li');
+li2.textContent = '緯度: 116.3972';
+li.insertAdjacentElement('afterend', ul2);
+ul2.insertAdjacentElement('beforeend', li2);
+
+
+
