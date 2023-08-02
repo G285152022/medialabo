@@ -20,3 +20,11 @@ table > thead > tr > th {
 	text-align: left;
 	border-bottom: 1px solid;
 }
+
+div#result > ul > ul {
+	display: grid; 
+	grid-template-columns: 6fr 5fr 7fr;
+    grid-auto-rows: 80px;
+	grid-gap: 10px;
+    width: 500px;
+}
