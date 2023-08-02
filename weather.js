@@ -54,21 +54,51 @@ div.insertAdjacentElement('beforeend', ul);
 ul.insertAdjacentElement('beforeend', li);
 let ul2 = document.createElement('ul');
 li.insertAdjacentElement('afterend', ul2);
-let w = ['緯度', '経度', '天気', '最低気温', '最高気温', '湿度', '風速', '風向', '都市名'];
-let d = data.coord.lon;
-let d1 = data.coord.lat;
-let d2 = data.weather[0].description;
-let d3 = data.main.temp_min;
-let d4 = data.main.temp_max;
-let d5 = data.main.humidity;
-let d6 = data.wind.speed;
-let d7 = data.wind.deg;
-let d8 = data.name;
-let array = [d, d1, d2, d3, d4, d5, d6, d7, d8];
+let w = [
+  {name:'緯度', d:116.3972},
+  {name:'経度', d:39.9075},
+  {name:'天気', d:'曇りがち'},
+  {name:'最低気温', d:9.94},
+  {name:'最高気温', d:9.94},
+  {name:'湿度', d:14},
+  {name:'風速', d:2.65},
+  {name:'風向', d:197},
+  {name:'都市名', d:'北京市'}
+];
+
 for(let n of w){
   let li2 = document.createElement('li');
-  li2.textContent = (n + ': ' + n);
+  li2.textContent = (n.name + ': ' + n.d);
   ul2.insertAdjacentElement('beforeend', li2);
 }
 
+let wt = [
+  {name:'カイロ',d:360630},
+  {name:'モスクワ',d:524901},
+  {name:'ヨハネスブルク',d:993800},
+  {name:'北京',d:1816670},
+  {name:'東京',d:1850147},
+  {name:'シンガポール',d:1880252},
+  {name:'シドニー',d:2147714},
+  {name:'ロンドン',d:2643743},
+  {name:'パリ',d:2968815},
+  {name:'リオデジャネイロ',d:3451189},
+  {name:'ニューヨーク',d:5128581},
+  {name:'ロサンゼルス',d:5368361},
+];
 
+let b = document.querySelector('#print');
+b.addEventListener('click', hantei);
+function hantei() {
+  let t = document.querySelector('input[name="tenki"]');
+  let tenki = t.value;
+  for(let n of wt){
+    if(tenki == n.d || tenki == n.name){
+      console.log(n.name);
+    }
+  }
+
+
+
+
+}
