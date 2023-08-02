@@ -46,8 +46,6 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
-console.log(data);
-
 let div = document.querySelector('div#result');
 let ul = document.createElement('ul');
 let li = document.createElement('li');
@@ -55,10 +53,22 @@ li.textContent = '世界の天気(検索結果1件)';
 div.insertAdjacentElement('beforeend', ul);
 ul.insertAdjacentElement('beforeend', li);
 let ul2 = document.createElement('ul');
-let li2 = document.createElement('li');
-li2.textContent = '緯度: 116.3972';
 li.insertAdjacentElement('afterend', ul2);
-ul2.insertAdjacentElement('beforeend', li2);
-
+let w = ['緯度', '経度', '天気', '最低気温', '最高気温', '湿度', '風速', '風向', '都市名'];
+let d = data.coord.lon;
+let d1 = data.coord.lat;
+let d2 = data.weather[0].description;
+let d3 = data.main.temp_min;
+let d4 = data.main.temp_max;
+let d5 = data.main.humidity;
+let d6 = data.wind.speed;
+let d7 = data.wind.deg;
+let d8 = data.name;
+let array = [d, d1, d2, d3, d4, d5, d6, d7, d8];
+for(let n of w){
+  let li2 = document.createElement('li');
+  li2.textContent = (n + ': ' + n);
+  ul2.insertAdjacentElement('beforeend', li2);
+}
 
 
