@@ -20,36 +20,29 @@ function hantei() {
   let y = document.querySelector('span#answer');
   y.textContent = yoso;
   let r = document.querySelector('p#result');
-  let p = document.createElement('p');
 
   // 課題3-1: 正解判定する
   // kotae と yoso が一致するかどうか調べて結果を出力
   // 課題3-1における出力先はコンソール
   if(kaisu < 4){
     if(kotae == yoso){
-      p.textContent = '正解です. おめでとう！';
-      r.insertAdjacentElement('beforeend', p);
+      r.textContent = '正解です. おめでとう！';
       kaisu += 1;
     }
     else if(kaisu == 3){
-      p.textContent = ('まちがい. 残念でした答えは' + kotae + 'です.');
-      r.insertAdjacentElement('beforeend', p);
+      r.textContent = ('まちがい. 残念でした答えは' + kotae + 'です.');
       kaisu += 1;
     }
     else if(kotae != yoso && kotae > yoso){
-      p.textContent = 'まちがい.答えはもっと大きいですよ';
-      r.insertAdjacentElement('beforeend', p);
+      r.textContent = 'まちがい.答えはもっと大きいですよ';
       kaisu += 1;
     }
     else{
-      p.textContent = 'まちがい.答えはもっと小さいですよ';
-      r.insertAdjacentElement('beforeend', p);
+      r.textContent = 'まちがい.答えはもっと小さいですよ';
       kaisu += 1;
     }
   }else{
-    p.textContent = ('答えは' + kotae + 'でした. すでにゲームは終わっています');
-    r.insertAdjacentElement('beforeend', p);
-
+    r.textContent = ('答えは' + kotae + 'でした. すでにゲームは終わっています');
     kaisu += 1;
   }
 }
