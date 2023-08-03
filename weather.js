@@ -49,8 +49,8 @@ let data = {
 let div = document.querySelector('div#result');
 let ul = document.createElement('ul');
 let li = document.createElement('li');
-let ken = 1;
-li.textContent = '世界の天気(検索結果' + ken + '件)';
+let ken = 0;
+li.textContent = '世界の天気(検索結果1件)';
 div.insertAdjacentElement('beforeend', ul);
 ul.insertAdjacentElement('beforeend', li);
 let ul2 = document.createElement('ul');
@@ -96,8 +96,12 @@ let wt = [
 
 let b = document.querySelector('#print');
 b.addEventListener('click', hantei);
+let ul3 = document.createElement('ul');
+
 function hantei() {
+  ul2.remove();
   ken += 1;
+  li.insertAdjacentElement('afterend', ul3);
   let t = document.querySelector('input[name="tenki"]');
   let tenki = t.value;
   for(let n of wd){
@@ -105,51 +109,51 @@ function hantei() {
     if(tenki == wt[0].name || tenki == wt[0].d){
       lid.textContent = (n.name + ': ' + n.kd);
       li.textContent = '世界の天気(検索結果' + ken + '件)';
-      ul2.insertAdjacentElement('beforeend', lid);
+      ul3.insertAdjacentElement('beforeend', lid);
     }else if(tenki == wt[1].name || tenki == wt[1].d){
       lid.textContent = (n.name + ': ' + n.md);
       li.textContent = '世界の天気(検索結果' + ken + '件)';
-      ul2.insertAdjacentElement('beforeend', lid);
+      ul3.insertAdjacentElement('beforeend', lid);
     }else if(tenki == wt[2].name || tenki == wt[2].d){
       lid.textContent = (n.name + ': ' + n.yd);
       li.textContent = '世界の天気(検索結果' + ken + '件)';
-      ul2.insertAdjacentElement('beforeend', lid);
+      ul3.insertAdjacentElement('beforeend', lid);
     }else if(tenki == wt[3].name || tenki == wt[3].d){
       lid.textContent = (n.name + ': ' + n.pd);
       li.textContent = '世界の天気(検索結果' + ken + '件)';
-      ul2.insertAdjacentElement('beforeend', lid);
+      ul3.insertAdjacentElement('beforeend', lid);
     }else if(tenki == wt[4].name || tenki == wt[4].d){
       lid.textContent = (n.name + ': ' + n.td);
       li.textContent = '世界の天気(検索結果' + ken + '件)';
-      ul2.insertAdjacentElement('beforeend', lid);
+      ul3.insertAdjacentElement('beforeend', lid);
     }else if(tenki == wt[5].name || tenki == wt[5].d){
       lid.textContent = (n.name + ': ' + n.sd);
       li.textContent = '世界の天気(検索結果' + ken + '件)';
-      ul2.insertAdjacentElement('beforeend', lid);
+      ul3.insertAdjacentElement('beforeend', lid);
     }else if(tenki == wt[6].name || tenki == wt[6].d){
       lid.textContent = (n.name + ': ' + n.syd);
       li.textContent = '世界の天気(検索結果' + ken + '件)';
-      ul2.insertAdjacentElement('beforeend', lid);
+      ul3.insertAdjacentElement('beforeend', lid);
     }else if(tenki == wt[7].name || tenki == wt[7].d){
       lid.textContent = (n.name + ': ' + n.ld);
       li.textContent = '世界の天気(検索結果' + ken + '件)';
-      ul2.insertAdjacentElement('beforeend', lid);
+      ul3.insertAdjacentElement('beforeend', lid);
     }else if(tenki == wt[8].name || tenki == wt[8].d){
       lid.textContent = (n.name + ': ' + n.pad);
       li.textContent = '世界の天気(検索結果' + ken + '件)';
-      ul2.insertAdjacentElement('beforeend', lid);
+      ul3.insertAdjacentElement('beforeend', lid);
     }else if(tenki == wt[9].name || tenki == wt[9].d){
       lid.textContent = (n.name + ': ' + n.rd);
       li.textContent = '世界の天気(検索結果' + ken + '件)';
-      ul2.insertAdjacentElement('beforeend', lid);
+      ul3.insertAdjacentElement('beforeend', lid);
     }else if(tenki == wt[10].name || tenki == wt[10].d){
       lid.textContent = (n.name + ': ' + n.nd);
       li.textContent = '世界の天気(検索結果' + ken + '件)';
-      ul2.insertAdjacentElement('beforeend', lid);
+      ul3.insertAdjacentElement('beforeend', lid);
     }else{
       lid.textContent = (n.name + ': ' + n.losd);
       li.textContent = '世界の天気(検索結果' + ken + '件)';
-      ul2.insertAdjacentElement('beforeend', lid);
+      ul3.insertAdjacentElement('beforeend', lid);
     }
   }
 }
